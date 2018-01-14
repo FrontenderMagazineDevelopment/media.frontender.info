@@ -1,0 +1,15 @@
+sudo: false
+language: node_js
+branches:
+  only:
+  - master
+addons:
+  apt:
+    packages:
+    - sshpass
+before_install: true
+install: true
+before_script:
+- chmod +x ./deploy/deploy.sh
+script: true
+after_script: ./deploy/deploy.sh
